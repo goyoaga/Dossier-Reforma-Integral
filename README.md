@@ -1,6 +1,6 @@
 # Dossier Reforma Integral
 
-Sitio estático responsive que adapta a web el dossier de reforma integral de agosto de 2026. Conserva el contenido del documento y utiliza las diez imágenes originales entregadas para las comparativas de cinco estancias.
+Sitio estático responsive que adapta a web el dossier de reforma integral de agosto de 2026. Conserva el contenido del documento y utiliza las diez imágenes originales entregadas para comparadores interactivos antes/después de cinco estancias.
 
 ## Desarrollo local
 
@@ -20,6 +20,7 @@ El repositorio está preparado para publicarse desde la raíz mediante GitHub Pa
 
 - `index.html`: contenido y estructura semántica.
 - `styles.css`: diseño responsive, foco, alto contraste y reducción de movimiento.
-- `script.js`: navegación móvil progresiva.
-- `assets/`: imágenes originales antes/después.
+- `script.js`: navegación móvil y comparadores accesibles con teclado, ratón y touch.
+- `assets/`: imágenes originales antes/después y derivados responsive AVIF/WebP.
+- `downloads/`: dossier PDF descargable.
 
