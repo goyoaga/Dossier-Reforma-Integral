@@ -14,3 +14,7 @@ main{overflow:hidden}.hero,.room,.budget{width:min(calc(100% - 2rem),var(--max))
 @media(max-width:620px){.comparison-stage{aspect-ratio:3/4}.comparison-tag{font-size:.9rem}.comparison-help{padding-inline:1rem}}
 @media(forced-colors:active){.comparison-divider,.comparison-tag{forced-color-adjust:none}.comparison-range{opacity:1}}
 .comparison-divider::after{content:"↔";position:absolute;top:50%;left:50%;display:grid;place-items:center;width:2.75rem;height:2.75rem;border:3px solid #fff;border-radius:50%;background:var(--ink);color:#fff;font-weight:900;transform:translate(-50%,-50%)}.comparison-stage:focus-within{outline:4px solid var(--gold);outline-offset:4px}.comparison-range:focus-visible{opacity:.01;outline:0}.comparison-range:focus-visible::-webkit-slider-thumb{visibility:hidden}.comparison-range:focus-visible::-moz-range-thumb{visibility:hidden}
+
+/* Keep portrait comparisons legible on wide screens without changing mobile. */
+.comparison{--clamped-position:clamp(0%,var(--position),100%)}.comparison-after{clip-path:inset(0 calc(100% - var(--clamped-position)) 0 0)}.comparison-divider{left:var(--clamped-position)}
+@media(min-width:621px){.comparison-stage{width:min(100%,1050px);margin-inline:auto;aspect-ratio:1/1}}
