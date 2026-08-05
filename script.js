@@ -15,3 +15,17 @@ nav?.addEventListener('click', (event) => {
   nav.removeAttribute('data-open');
 });
 
+document.querySelectorAll('[data-comparison]').forEach((comparison) => {
+  const range = comparison.querySelector('.comparison-range');
+  if (!(range instanceof HTMLInputElement)) return;
+
+  const update = () => {
+    const after = Number(range.value);
+    comparison.style.setProperty('--position', `${after}%`);
+    range.setAttribute('aria-valuetext', `${100 - after} % antes, ${after} % después`);
+  };
+
+  range.addEventListener('input', update);
+  update();
+});
+
