@@ -17,4 +17,4 @@ main{overflow:hidden}.hero,.room,.budget{width:min(calc(100% - 2rem),var(--max))
 
 /* Keep portrait comparisons legible on wide screens without changing mobile. */
 .comparison{--clamped-position:clamp(0%,var(--position),100%)}.comparison-after{clip-path:inset(0 calc(100% - var(--clamped-position)) 0 0)}.comparison-divider{left:var(--clamped-position)}
-@media(min-width:621px){.comparison-stage{width:min(100%,1050px);margin-inline:auto;aspect-ratio:1/1}}
+@media(min-width:621px){.comparison-stage{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;width:100%;margin-inline:auto;aspect-ratio:3/2;overflow:visible;background:transparent;box-shadow:none}.comparison-image{position:relative;inset:auto;min-width:0;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}.comparison-after{clip-path:none}.comparison-tag{top:0}.tag-before{right:auto;left:0}.tag-after{left:calc(50% + .625rem)}.comparison-divider,.comparison-range,.comparison-help{display:none}}
